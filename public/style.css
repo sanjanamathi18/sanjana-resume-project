@@ -341,10 +341,6 @@
 }
 
 .profile-photo {
-    width: 200px;
-    height: auto;
-    display: block;
-    /* centers on its own line */
-    margin: 1rem auto;
-    /* centers horizontally */
+    width: "200";
+    height: "250";
 }

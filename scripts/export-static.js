@@ -20,7 +20,6 @@ const pages = [
 
 function renderSync(tplPath, data = {}) {
     const template = fs.readFileSync(tplPath, "utf8");
-    // filename is CRITICAL so EJS resolves partials; async:false keeps includes synchronous
     return ejs.render(template, data, { filename: tplPath, async: false });
 }
 

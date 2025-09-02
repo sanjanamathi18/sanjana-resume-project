@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Profile
+    </title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="style.css">
+
+    <h1>Education</h1>
+
+    <div class="study-info accordion">
+
+        <!-- JENSEN -->
+        <div class="edu-entry">
+            <div class="edu-head">
+                <div>
+                    <h3>2024 - present</h3>
+                    <h2>JENSEN VOCATIONAL COLLEGE,</h2>
+                    <h2>GOTHENBURG</h2>
+                    <h3>Software Tester</h3>
+                </div>
+                <a href="#" class="more-info-toggle" aria-expanded="false" aria-controls="edu-jensen">More info</a>
+            </div>
+            <div id="edu-jensen" class="more-info" role="region" aria-hidden="true">
+                <p>
+                    Gained practical experience in software testing and requirements management through project-based
+                    learning.
+                    Designed and executed manual and automated test cases for web applications, ensuring functionality,
+                    performance, and reliability.
+                    Applied Scrum practices such as sprint planning, daily stand-ups, and retrospectives to manage
+                    project progress.
+                    Created test plans, test cases, checklists, and reports, documenting defects and collaborating with
+                    peers for resolution.
+                    Developed skills in requirements engineering, including gathering, analyzing, and prioritizing
+                    functional and non-functional requirements.
+                    Worked with tools such as Jira, Trello, Jenkins, Playwright, Postman, Jest, and Supertest to support
+                    agile software development and quality assurance processes.
+                </p>
+            </div>
+        </div>
+
+        <!-- ANNA UNIVERSITY -->
+        <div class="edu-entry">
+            <div class="edu-head">
+                <div>
+                    <h3>2012 - 2016</h3>
+                    <h2>ANNA UNIVERSITY, INDIA</h2>
+                    <h2>B.E. — Electronics & Communication</h2>
+                </div>
+                <a href="#" class="more-info-toggle" aria-expanded="false" aria-controls="edu-anna">More info</a>
+            </div>
+            <div id="edu-anna" class="more-info" role="region" aria-hidden="true">
+                <p>
+                    Built a strong academic foundation in core electronics, digital systems, signal processing, and
+                    embedded systems, while also gaining programming experience in C and C++.
+                    Completed projects on microcontroller-based systems, communication protocols, and digital signal
+                    processing.
+                    Developed problem-solving skills through coursework and hands-on labs, preparing for a career in
+                    technology.
+                </p>
+            </div>
+        </div>
+
+        <!-- SWEDISH LANGUAGE -->
+        <div class="edu-entry">
+            <div class="edu-head">
+                <div>
+                    <h3>2021</h3>
+                    <h2>SWEDISH LANGUAGE — D</h2>
+                </div>
+                <a href="#" class="more-info-toggle" aria-expanded="false" aria-controls="edu-swe">More info</a>
+            </div>
+            <div id="edu-swe" class="more-info" role="region" aria-hidden="true">
+                <p>
+                    Intermediate, with practical experience in everyday and workplace communication
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <br><br>
+    <a href="index.html">Go back to Home</a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggles = document.querySelectorAll(".more-info-toggle");
+            const panels = document.querySelectorAll(".more-info");
+
+            function closeAll() {
+                panels.forEach(p => {
+                    p.classList.remove("show");
+                    p.style.maxHeight = null;
+                    p.setAttribute("aria-hidden", "true");
+                });
+                toggles.forEach(t => t.textContent = "More info");
+                toggles.forEach(t => t.setAttribute("aria-expanded", "false"));
+            }
+
+            toggles.forEach(link => {
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const panel = document.getElementById(link.getAttribute("aria-controls"));
+                    const isOpen = panel.classList.contains("show");
+
+                    // Accordion behavior: close others first
+                    closeAll();
+
+                    if (!isOpen) {
+                        panel.classList.add("show");
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                        panel.setAttribute("aria-hidden", "false");
+                        link.textContent = "Less info";
+                        link.setAttribute("aria-expanded", "true");
+                    }
+                });
+            });
+
+            // Recompute height on window resize for smooth animation
+            window.addEventListener("resize", () => {
+                document.querySelectorAll(".more-info.show").forEach(p => {
+                    p.style.maxHeight = p.scrollHeight + "px";
+                });
+            });
+        });
+    </script>
+
+    </body>
+
+</html>

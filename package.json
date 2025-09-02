@@ -1,0 +1,27 @@
+{
+  "name": "resume_project",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanjanamathi18/sanjana-resume-project.git"
+  },
+  "author": "Sanjana Mathiyalagan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanjanamathi18/sanjana-resume-project/issues"
+  },
+  "homepage": "https://github.com/sanjanamathi18/sanjana-resume-project#readme",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}

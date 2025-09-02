@@ -339,3 +339,12 @@
 .contact-card a:hover {
     text-decoration: underline;
 }
+
+.profile-photo {
+    width: 200px;
+    height: auto;
+    display: block;
+    /* centers on its own line */
+    margin: 1rem auto;
+    /* centers horizontally */
+}

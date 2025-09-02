@@ -22,15 +22,14 @@ const pages = [
     { in: "volunteering.ejs", out: "volunteering.html" },
 ];
 
-(async () => {
-    for (const p of pages) {
-        try {
-            const tplPath = path.join(VIEWS, p.in);
-            const html = await ejs.renderFile(tplPath, {}, { async: true });
-            fs.writeFileSync(path.join(__dirname, "..", p.out), html, "utf8");
-            console.log(`✔ Exported ${p.in} → ${p.out}`);
-        } catch (err) {
-            console.error(`❌ Failed to export ${p.in}:`, err);
-        }
+for (const p of pages) {
+    try {
+        const tplPath = path.join(VIEWS, p.in);
+        const html = await ejs.renderFile(tplPath, {}, { async: true });
+        fs.writeFileSync(path.join(__dirname, "..", p.out), html, "utf8");
+        console.log(`✔ Exported ${p.in} → ${p.out}`);
+    } catch (err) {
+        console.error(`❌ Failed to export ${p.in}:`, err);
     }
-})();
+}
+

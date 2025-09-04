@@ -1,17 +1,14 @@
 function openTab(evt, tabName) {
-    // Declare all variables
-    let i, tabcontent, tablinks;
-
     // Get all elements with class="tab-content" and hide them
-    tabcontent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+    const tabContent = document.getElementsByClassName("tab-content");
+    for (let i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
     }
 
-    // Get all elements with class="tab-link" and remove the class "active"
-    tablinks = document.getElementsByClassName("tab-link");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    // Get all elements with class="tab-link" and remove the "active" class
+    const tabLinks = document.getElementsByClassName("tab-link");
+    for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].className = tabLinks[i].className.replace(" active", "");
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
@@ -40,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const panel = document.getElementById(link.getAttribute("aria-controls"));
             const isOpen = panel.classList.contains("show");
 
-            // Accordion behavior: close others first
             closeAll();
 
             if (!isOpen) {
@@ -53,15 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Recompute height on window resize for smooth animation
     window.addEventListener("resize", () => {
         document.querySelectorAll(".more-info.show").forEach(p => {
             p.style.maxHeight = p.scrollHeight + "px";
         });
     });
-});
 
-// Set the default tab to be open when the page loads
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector(".tab-content.active").style.display = "block";
+    // Set the first tab content to be displayed on page load
+    document.getElementById("about-me-content").style.display = "block";
 });

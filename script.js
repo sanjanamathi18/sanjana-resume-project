@@ -70,3 +70,4 @@ function loadText(file, elementId) {
 
 loadText("about-me.txt", "about-me-text");
 loadText("edu-jensen.txt", "edu-jensen-text");
+loadText("edu-anna.txt", "edu-anna-text");

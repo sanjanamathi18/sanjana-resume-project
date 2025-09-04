@@ -1,9 +1,4 @@
-                            Built a strong academic foundation in core electronics, digital systems, signal processing,
-                            and
-                            embedded systems, while also gaining programming experience in C and C++.
-                            Completed projects on microcontroller-based systems, communication protocols, and digital
-                            signal
-                            processing.
-                            Developed problem-solving skills through coursework and hands-on labs, preparing for a
-                            career in
-                            technology.
+Built a strong academic foundation in core electronics, digital systems, signal processing, and embedded systems, 
+while also gaining programming experience in C and C++. Completed projects on microcontroller-based systems, 
+communication protocols, and digital signal processing. Developed problem-solving skills through coursework and 
+hands-on labs, preparing for acareer in technology.

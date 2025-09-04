@@ -74,6 +74,7 @@
 
 /* Panel with smooth open/close */
 .more-info {
+    white-space: normal;
     overflow: hidden;
     max-height: 0;
     transition: max-height 240ms ease;

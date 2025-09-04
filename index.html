@@ -5,33 +5,275 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        Home
+        Sanjana Mathiyalagan - Portfolio
     </title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Sanjana Mathiyalagan</h1>
-    <img src="sanjana_photo.jpeg" alt="Sanjana Mathiyalagan" width="200" height="250">
-    <br>
-    <br>
-    <a href="personal_info.html">About me</a>
-    <br>
-    <br>
-    <a href="academic_info.html">View Academic Info</a>
-    <br>
-    <br>
-    <a href="skills.html">View Skills</a>
-    <br>
-    <br>
-    <a href="projects.html">View Projects</a>
-    <br>
-    <br>
-    <a href="volunteering.html">View Volunteering Experience</a>
-    <br>
-    <br>
-    <a href="contact.html">Contact</a>
-    <br>
-    <br>
+    <div class="tab-container">
+
+        <div class="profile-section">
+            <img src="sanjana_photo.jpg" alt="Sanjana Mathiyalagan">
+            <h1>Sanjana Mathiyalagan</h1>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-link active" onclick="openTab(event, 'about-me-content')">About Me</button>
+            <button class="tab-link" onclick="openTab(event, 'academic-content')">Education</button>
+            <button class="tab-link" onclick="openTab(event, 'skills-content')">Skills</button>
+            <button class="tab-link" onclick="openTab(event, 'projects-content')">Projects</button>
+            <button class="tab-link" onclick="openTab(event, 'volunteering-content')">Volunteering</button>
+            <button class="tab-link" onclick="openTab(event, 'contact-content')">Contact</button>
+        </div>
+
+        <div id="about-me-content" class="tab-content active">
+            <p class="about-me">I am an Electronics and Communication Engineering graduate with a strong
+                foundation in software development, requirements management, and quality assurance. With
+                hands-on experience in both manual and automated testing, I am passionate about building
+                reliable, user-focused software solutions. My structured approach, combined with a quick
+                learning ability, enables me to adapt to new technologies and contribute effectively in
+                agile environments. I enjoy collaborating with cross-functional teams to analyze requirements,
+                design test strategies, and ensure the delivery of high-quality software products. My goal is
+                to continuously grow as a software professional while driving value and innovation in every
+                project I undertake.</p>
+        </div>
+
+        <div id="academic-content" class="tab-content">
+            <h1>Education</h1>
+            <div class="study-info accordion">
+                <div class="edu-entry">
+                    <div class="edu-head">
+                        <div>
+                            <h3>2024 - present</h3>
+                            <h2>JENSEN VOCATIONAL COLLEGE,</h2>
+                            <h2>GOTHENBURG</h2>
+                            <h3>Software Tester</h3>
+                        </div>
+                        <a href="#" class="more-info-toggle" aria-expanded="false" aria-controls="edu-jensen">More
+                            info</a>
+                    </div>
+                    <div id="edu-jensen" class="more-info" role="region" aria-hidden="true">
+                        <p>
+                            Gained practical experience in software testing and requirements management through
+                            project-based
+                            learning.
+                            Designed and executed manual and automated test cases for web applications, ensuring
+                            functionality,
+                            performance, and reliability.
+                            Applied Scrum practices such as sprint planning, daily stand-ups, and retrospectives to
+                            manage
+                            project progress.
+                            Created test plans, test cases, checklists, and reports, documenting defects and
+                            collaborating with
+                            peers for resolution.
+                            Developed skills in requirements engineering, including gathering, analyzing, and
+                            prioritizing
+                            functional and non-functional requirements.
+                            Worked with tools such as Jira, Trello, Jenkins, Playwright, Postman, Jest, and Supertest to
+                            support
+                            agile software development and quality assurance processes.
+                        </p>
+                    </div>
+                </div>
+                <div class="edu-entry">
+                    <div class="edu-head">
+                        <div>
+                            <h3>2012 - 2016</h3>
+                            <h2>ANNA UNIVERSITY, INDIA</h2>
+                            <h2>B.E. — Electronics & Communication</h2>
+                        </div>
+                        <a href="#" class="more-info-toggle" aria-expanded="false" aria-controls="edu-anna">More
+                            info</a>
+                    </div>
+                    <div id="edu-anna" class="more-info" role="region" aria-hidden="true">
+                        <p>
+                            Built a strong academic foundation in core electronics, digital systems, signal processing,
+                            and
+                            embedded systems, while also gaining programming experience in C and C++.
+                            Completed projects on microcontroller-based systems, communication protocols, and digital
+                            signal
+                            processing.
+                            Developed problem-solving skills through coursework and hands-on labs, preparing for a
+                            career in
+                            technology.
+                        </p>
+                    </div>
+                </div>
+                <div class="edu-entry">
+                    <div class="edu-head">
+                        <div>
+                            <h3>2021</h3>
+                            <h2>SWEDISH LANGUAGE — D</h2>
+                        </div>
+                        <a href="#" class="more-info-toggle" aria-expanded="false" aria-controls="edu-swe">More info</a>
+                    </div>
+                    <div id="edu-swe" class="more-info" role="region" aria-hidden="true">
+                        <p>
+                            Intermediate, with practical experience in everyday and workplace communication
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="skills-content" class="tab-content">
+            <h1>Skills</h1>
+            <div class="skills-container">
+                <div class="skill-group">
+                    <h2>Programming & Frameworks</h2>
+                    <ul>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>Flask</li>
+                        <li>Express</li>
+                        <li>HTML</li>
+                        <li>MySQL</li>
+                        <li>Node.js</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h2>Testing</h2>
+                    <ul>
+                        <li>Unittest</li>
+                        <li>Tricentis</li>
+                        <li>Playwright</li>
+                        <li>Postman</li>
+                        <li>Newman</li>
+                        <li>Jest</li>
+                        <li>Supertest</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h2>Tools & Practices</h2>
+                    <ul>
+                        <li>Agile</li>
+                        <li>Scrum</li>
+                        <li>Jira</li>
+                        <li>Trello</li>
+                        <li>Jenkins</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h2>Other Competencies</h2>
+                    <ul>
+                        <li>Requirement handling</li>
+                        <li>Test documentation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="projects-content" class="tab-content">
+            <h1>Projects</h1>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h2>User Management System – Full Stack Testing & CI/CD</h2>
+                    <span class="project-year">2025</span>
+                    <p>
+                        End-to-end development and test automation of a web-based user
+                        management application integrated with database and deployed via
+                        CI/CD pipelines. MySQL workbench for database management
+                    </p>
+                    <span class="project-tag">Automation</span>
+                </div>
+                <div class="project-card">
+                    <h2>Digitization of a Bakery</h2>
+                    <span class="project-year">2025</span>
+                    <h3>Part 1: Requirements Engineering</h3>
+                    <ul>
+                        <li>Gathered and documented functional and non-functional requirements through interviews,
+                            workshops, and brainstorming.</li>
+                        <li>Used MoSCoW and Priority Matrix for prioritisation.</li>
+                        <li>Created user stories, use case diagrams, test ideas, and a low-fidelity prototype for an
+                            e-commerce platform.</li>
+                    </ul>
+                    <h3>Part 2: Requirements-Based Testing</h3>
+                    <ul>
+                        <li>Designed test cases from requirements and developed a test plan outlining objectives and
+                            strategies.</li>
+                        <li>Performed exploratory testing, documented bugs with priorities, and created a traceability
+                            matrix.</li>
+                        <li>Compiled a final test report with insights and collaborated using Trello and Slack.</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h2>Student Management App</h2>
+                    <span class="project-year">2024</span>
+                    <p>
+                        Developed a web application in Python using Flask and SQLite.
+                        Built UI with HTML.
+                        Implemented automated tests using the Unittest framework.
+                        Used CI/CD pipeline and GitHub for version control.
+                    </p>
+                </div>
+                <div class="project-card">
+                    <h2>Zalando Website Testing</h2>
+                    <span class="project-year">2024</span>
+                    <p>
+                        Performed testing activities following Scrum practices such as sprint
+                        planning, daily meetings, and retrospectives.
+                        Created test plans, test cases, and checklists.
+                        Performed exploratory testing, documented bugs, and compiled a test report.
+                    </p>
+                </div>
+                <div class="project-card">
+                    <h2>Robust Image Processing</h2>
+                    <span class="project-year">2016</span>
+                    <p>
+                        Developed a system to enhance image quality using digital image processing techniques.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="volunteering-content" class="tab-content">
+            <h1>Volunteering</h1>
+            <div class="volunteer-timeline">
+                <div class="vol-item">
+                    <div class="vol-dot" aria-hidden="true"></div>
+                    <div class="vol-content">
+                        <h2>Preschool, Gothenburg <span class="vol-duration">(3 months)</span></h2>
+                        <ul>
+                            <li>Supported daily activities and interacted with children.</li>
+                            <li>Developed communication and pedagogical skills.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="vol-item">
+                    <div class="vol-dot" aria-hidden="true"></div>
+                    <div class="vol-content">
+                        <h2>Second-hand Store, Gothenburg <span class="vol-duration">(5 months)</span></h2>
+                        <ul>
+                            <li>Customer service and cashier handling.</li>
+                            <li>Improved Swedish language skills in real-life situations.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact-content" class="tab-content">
+            <h1>Contact</h1>
+            <div class="contact-card">
+                <ul>
+                    <li><span class="contact-label">Email:</span>
+                        <a href="mailto:sanjuvimal@icloud.com">sanjuvimal@icloud.com</a>
+                    </li>
+                    <li><span class="contact-label">LinkedIn:</span>
+                        <a href="https://www.linkedin.com/in/sanjana-mathiyalagan-4aa6b4205"
+                            target="_blank">linkedin.com/in/sanjana-mathiyalagan-4aa6b4205</a>
+                    </li>
+                    <li><span class="contact-label">GitHub:</span>
+                        <a href="https://github.com/sanjanamathi18" target="_blank">github.com/sanjanamathi18</a>
+                    </li>
+                    <li><span class="contact-label">Location:</span> Gothenburg, Sweden</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <script src="scripts.js"></script>
 
 </body>
 

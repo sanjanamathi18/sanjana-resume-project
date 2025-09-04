@@ -58,3 +58,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set the first tab content to be displayed on page load
     document.getElementById("about-me-content").style.display = "block";
 });
+// Load About Me text
+fetch("about-me.txt")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("about-me-text").innerText = data;
+    })
+    .catch(error => console.error("Error loading About Me:", error));

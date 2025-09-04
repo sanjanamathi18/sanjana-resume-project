@@ -247,19 +247,6 @@
     margin-bottom: 22px;
 }
 
-.vol-dot {
-    position: absolute;
-    left: 4px;
-    top: 6px;
-    width: 12px;
-    height: 12px;
-    background: #3f51b5;
-    /* primary dot */
-    border-radius: 50%;
-    box-shadow: 0 0 0 3px #eef2ff;
-    /* halo */
-}
-
 .vol-content {
     background: #f9f9f9;
     border-radius: 8px;

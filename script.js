@@ -59,9 +59,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("about-me-content").style.display = "block";
 });
 // Load About Me text
-fetch("about-me.txt")
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("about-me-text").innerText = data;
-    })
-    .catch(error => console.error("Error loading About Me:", error));
+function loadText(file, elementId) {
+    fetch(file)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(elementId).innerText = data;
+        })
+        .catch(error => console.error(`Error loading ${file}:`, error));
+}
+
+loadText("about-me.txt", "about-me-text");
+loadText("edu-jensen.txt", "edu-jensen-text");
